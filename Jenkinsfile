@@ -1,7 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('começando') {
+    stage('comeÃ§ando') {
+      agent {
+        docker {
+          image 'jenkins/agent'
+        }
+
+      }
       steps {
         echo 'teste'
       }
@@ -13,7 +19,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'echo bananas'
       }
